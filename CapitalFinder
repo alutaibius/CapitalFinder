@@ -1,0 +1,26 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class CapitalFinder {
+    public static void main(String[] args) {
+        Map<String, String> capitals = new HashMap<>();
+        capitals.put("США", "Вашингтон, Д.С.");
+        capitals.put("Франция", "Париж");
+        capitals.put("Германия", "Берлин");
+        capitals.put("Япония", "Токио");
+        capitals.put("Индия", "Нью-Дели");
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите название страны: ");
+        String country = scanner.nextLine();
+        
+        String capital = capitals.get(country);
+        
+        if (capital != null) {
+            System.out.println("Столица " + country + ": " + capital);
+        } else {
+            System.out.println("Столица не найдена.");
+        }
+    }
+}
